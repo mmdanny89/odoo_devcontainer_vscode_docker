@@ -10,4 +10,4 @@ odoo16
 `You can repeat this structure into development folder with others odoo versions.`
 
 2. Open VScode and `Reopen in Devcontainer`.
-3. Check and ajust launch.json and settings.json for debug
+3. Check and ajust `launch.json` and `settings.json` for debug
