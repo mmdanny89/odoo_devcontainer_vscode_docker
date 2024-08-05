@@ -1,0 +1,11 @@
+{
+    "python.languageServer": "None",
+    "python.formatting.provider": "black",
+    "python.analysis.extraPaths": [
+        "./odoo16/env/lib/python3.10/site-packages",
+        "./odoo16/odoo",
+        "./odoo16/custom_addons",
+        "./odoo16/sistema-comercial-itm",
+
+    ],
+}

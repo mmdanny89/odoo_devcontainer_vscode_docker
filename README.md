@@ -1,2 +1,2 @@
-# odoo_devcontainer_vscode_docker
-Odoo Debbug in  Devcontainer Vscode Docker
+1. Build Image: `docker build --pull --rm -f "images/odoo/Dockerfile" -t odoodevdocker:latest "images/odoo"`
+2. Open VScode and `Reopen in Devcontainer`
