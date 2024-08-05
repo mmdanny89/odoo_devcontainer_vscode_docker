@@ -18,4 +18,4 @@ pwd: odoo
 port: 5433
 host: localhost
 ```
-Note: We use 5433 port for avoid any port conflict with the host. This port is only for external connectios for example PgAdmin or others in your computer.
+**Note:** We use 5433 port for avoid any port conflict with the host. This port is only for external connectios for example PgAdmin or others in your computer.
