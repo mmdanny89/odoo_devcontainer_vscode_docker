@@ -11,11 +11,11 @@
         "program": "${workspaceFolder}/odoo16/odoo/odoo-bin",
         "python": "${workspaceFolder}/odoo16/env/bin/python",
         "console": "integratedTerminal",
-        "args": ["-c","${workspaceFolder}/odoo16/odoo.conf","-u","dclick_sale",],
+        "args": ["-c","${workspaceFolder}/odoo16/odoo.conf","-u","any_module",],
         "stopOnEntry": false,
         "logToFile": true
       },
-      // , "-u", "all", "1010_advance_payments_dual_currency"
+      // , "-u", "all", "any_module"
   
       // "--auto-reload",
       // "--debug",
