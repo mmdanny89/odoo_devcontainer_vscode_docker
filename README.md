@@ -8,6 +8,7 @@ odoo16
     odoo.conf
 ```
 `You can repeat this structure into development folder with others odoo versions.`
+
 `Remember adjust odoo.conf with your personal configurations`
 
 2. Open VScode and `Reopen in Devcontainer`.
