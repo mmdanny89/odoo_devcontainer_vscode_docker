@@ -1,0 +1,32 @@
+version: "3.7"
+services:
+  odoopostgres:
+    container_name: odoopostgres
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - 5433:5432
+    volumes:
+      - postgresql-data:/var/lib/postgresql/data/pgdata
+
+  odoodevserver:
+    image: odoodevdocker:latest
+    command: sleep infinity
+    environment:
+      - SHELL=/bin/bash
+    volumes:
+      - ..:/workspace:cached
+      # Enable if you require git cloning
+      # - ${HOME}/.ssh:/home/odoo/.ssh
+    working_dir: /workspace/development
+    ports:
+      - 8069:8069
+      - 8072:8072
+
+volumes:
+  postgresql-data:
+
