@@ -11,3 +11,11 @@ odoo16
 
 2. Open VScode and `Reopen in Devcontainer`.
 3. Check and ajust `launch.json` and `settings.json` for debug
+4. You can connect PgAdmin or other client for PostgreSQL in your computer.
+```
+user: odoo
+pwd: odoo
+port: 5433
+host: localhost
+```
+Note: We use 5433 port for avoid any port conflict with the host. This port is only for external connectios for example PgAdmin or others in your computer.
