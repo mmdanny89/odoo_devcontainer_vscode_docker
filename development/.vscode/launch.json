@@ -1,35 +1,34 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "name": "Python Odoo v16",
-        "type": "debugpy",
-        "request": "launch",
-        "program": "${workspaceFolder}/odoo16/odoo/odoo-bin",
-        "python": "${workspaceFolder}/odoo16/env/bin/python",
-        "console": "integratedTerminal",
-        "args": ["-c","${workspaceFolder}/odoo16/odoo.conf","-u","any_module",],
-        "stopOnEntry": false,
-        "logToFile": true
-      },
-      // , "-u", "all", "any_module"
-  
-      // "--auto-reload",
-      // "--debug",
-     
-      {
-          "type": "chrome",
-          "request": "launch",
-          "name": "JS Odoo v16",
-          "url": "http://localhost:8069/web?debug=assets",
-          "webRoot": "${workspaceFolder}/odoo16/odoo",
-          "sourceMapPathOverrides":{
-              "*":"${workspaceFolder}/odoo16/odoo/*",
-          }
-      },
-    ]
-  }
-  
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python Odoo v17",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/odoo17/odoo/odoo-bin",
+      "python": "${workspaceFolder}/odoo17/env/bin/python",
+      "console": "integratedTerminal",
+      "args": ["-c", "${workspaceFolder}/odoo17/odoo.conf", "-u", "any_module"],
+      "stopOnEntry": false,
+      "logToFile": true
+    },
+    // , "-u", "all", "any_module"
+
+    // "--auto-reload",
+    // "--debug",
+
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "JS Odoo v17",
+      "url": "http://localhost:8069/web?debug=assets",
+      "webRoot": "${workspaceFolder}/odoo17/odoo",
+      "sourceMapPathOverrides": {
+        "*": "${workspaceFolder}/odoo17/odoo/*"
+      }
+    }
+  ]
+}

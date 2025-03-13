@@ -1,8 +1,8 @@
 1. Build Image: `docker build --pull --rm -f "images/odoo/Dockerfile" -t odoodevdocker:latest "images/odoo"`
-2. Download from github Odoo 16 src and copy into folder development/odoo16 with name odoo. 
+2. Download from github Odoo 17 src and copy into folder development/odoo16 with name odoo.
 Example project structure into development folder.
 ```
-odoo16
+odoo17
     custom_addos
     odoo
     odoo.conf
