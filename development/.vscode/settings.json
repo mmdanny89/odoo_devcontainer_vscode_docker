@@ -1,9 +1,14 @@
 {
-  "python.languageServer": "None",
-  "python.formatting.provider": "black",
-  "python.analysis.extraPaths": [
-    "./odoo17/env/lib/python3.10/site-packages",
-    "./odoo17/odoo",
-    "./odoo17/custom_addons"
-  ]
+  "python.defaultInterpreterPath": "${workspaceFolder}/odoo17/env/bin/python",
+    "python.analysis.extraPaths": [
+    "${workspaceFolder}/odoo17/odoo",
+    "${workspaceFolder}/odoo17/odoo/addons",
+    "${workspaceFolder}/odoo17/odoo/odoo",
+    "${workspaceFolder}/odoo17/odoo/odoo/addons",
+    "${workspaceFolder}/odoo17/custom_addons",
+  ],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
 }
