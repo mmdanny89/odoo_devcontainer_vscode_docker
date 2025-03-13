@@ -1,28 +1,29 @@
-
 {
   "name": "Odoo Dev Server",
-  //longpolling_port is 8072
   "forwardPorts": [8069, 8072],
   "remoteUser": "odoo",
   "customizations": {
-    "settings": {
-      "terminal.integrated.profiles.linux": {
-        "odoo bash": {
-          "path": "/bin/bash"
-        }
-      },
-      "terminal.integrated.defaultProfile.linux": "odoo bash",
-      "debug.node.autoAttach": "disabled"
-    },
-    "dockerComposeFile": "./docker-compose.yml",
-    "service": "odoodevserver",
-    "workspaceFolder": "/workspace/development",
-    "shutdownAction": "stopCompose",
-    "extensions": [
-      "ms-python.python",
-      "ms-vscode.live-server",
-      "visualstudioexptteam.vscodeintellicode"
-    ]
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "ms-python.debugpy",
+        "ms-python.vscode-pylance",
+        "redhat.vscode-xml",
+        "ms-vscode.live-server",
+        "jigar-patel.odoosnippets",
+        "trinhanhngoc.vscode-odoo"
+      ],
+      "settings": {
+        "terminal.integrated.profiles.linux": {
+          "odoo bash": {
+            "path": "/bin/bash"
+          }
+        },
+        "terminal.integrated.defaultProfile.linux": "odoo bash",
+        "debug.node.autoAttach": "disabled"
+      }
+    }
   },
   "dockerComposeFile": "./docker-compose.yml",
   "service": "odoodevserver",
