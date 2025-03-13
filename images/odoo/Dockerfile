@@ -1,4 +1,4 @@
-FROM debian:12.6-slim as odoo
+FROM debian:12.6-slim AS odoo
 
 LABEL author=danny
 
@@ -67,7 +67,7 @@ RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
     && dpkg-reconfigure --frontend=noninteractive locales
 
 # Detect arch and install wkhtmltopdf
-ENV WKHTMLTOPDF_VERSION 0.12.6.1-3
+ENV WKHTMLTOPDF_VERSION=0.12.6.1-3
 RUN if [ "$(uname -m)" = "aarch64" ]; then export ARCH=arm64; fi \
     && if [ "$(uname -m)" = "x86_64" ]; then export ARCH=amd64; fi \
     && downloaded_file=wkhtmltox_$WKHTMLTOPDF_VERSION.bookworm_${ARCH}.deb \
@@ -86,9 +86,9 @@ USER odoo
 WORKDIR /home/odoo
 
 # Install Python via pyenv
-ENV PYTHON_VERSION=3.10.5
-ENV PYENV_ROOT /home/odoo/.pyenv
-ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
+ENV PYTHON_VERSION=3.10.5 \
+    PYENV_ROOT=/home/odoo/.pyenv \
+    PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 
 # From https://github.com/pyenv/pyenv#basic-github-checkout
 RUN git clone --depth 1 https://github.com/pyenv/pyenv.git .pyenv \
@@ -100,13 +100,13 @@ RUN git clone --depth 1 https://github.com/pyenv/pyenv.git .pyenv \
     && echo 'eval "$(pyenv init -)"' >>~/.bashrc
 
 
-ENV PATH /home/odoo/.local/bin:$PATH
+ENV PATH=/home/odoo/.local/bin:$PATH
 
 
 # Install Node via nvm
-ENV NODE_VERSION=16.18.0
-ENV NVM_DIR /home/odoo/.nvm
-ENV PATH ${NVM_DIR}/versions/node/v${NODE_VERSION}/bin/:${PATH}
+ENV NODE_VERSION=16.18.0 \
+    NVM_DIR=/home/odoo/.nvm \
+    PATH=${NVM_DIR}/versions/node/v${NODE_VERSION}/bin/:${PATH}
 
 RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash \
     && . ${NVM_DIR}/nvm.sh \
